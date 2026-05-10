@@ -64,7 +64,7 @@ POST
 
 ```json
 {
-  "scores": [80, 85, 90]
+  "scores": [85, 80, 95]
 }
 ```
 
@@ -93,11 +93,11 @@ POST
 
 | Scores       | Predicted Difficulty |
 | ------------ | -------------------- |
-| [20, 25, 30] | Easy                 |
-| [50, 60, 55] | Medium               |
-| [80, 90, 85] | Hard                 |
-| [70, 72, 71] | Medium               |
-| [10, 20]     | Medium               |
+| [25, 30, 35] | Easy                 |
+| [50, 65, 60] | Medium               |
+| [85, 80, 95] | Hard                 |
+| [72, 73, 74] | Medium               |
+| [15, 10, 20] | Medium               |
 
 # Results
 The system successfully predicts the next difficulty level based on previous user scores and dynamically adapts question difficulty.
