@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Difficulty Adjustment System</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Difficulty Adjustment System</h1>
+
+    <form method="POST">
+
+        <label>Enter Scores (comma separated)</label>
+
+        <input type="text"
+               name="scores"
+               placeholder="Example:80,90,85"
+               required>
+
+        <button type="submit">
+            Predict Difficulty
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>Result</h2>
+
+        <p><strong>Scores:</strong> {{ scores }}</p>
+
+        <p>
+            <strong>Next Difficulty:</strong>
+
+            <span class="difficulty">
+                {{ result.upper() }}
+            </span>
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
